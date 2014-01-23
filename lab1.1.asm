@@ -11,6 +11,7 @@ main:       addu $s0, $ra, $0
             syscall
 # now get an integer from the user
             li $v0, 5
+
 # save $31 in $16
 # system call for print_str
 # address of string to print
@@ -19,7 +20,7 @@ main:       addu $s0, $ra, $0
             syscall
 # do some computation here with the number
             addu $t0, $v0, $0
-            sll $t0, $t0, 2
+            sll $t0, $t0, 7
 # print the result
             li $v0, 1
             addu $a0, $t0, $0
